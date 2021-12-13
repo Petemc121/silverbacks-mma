@@ -18,12 +18,12 @@ export default function SliderImgs({
   slidePosition,
 }: sliderImagesInput) {
   return (
-    <div>
+    <>
       {sliderImages.map((sliderImage) => {
         return (
           <SliderImg slidePosition={slidePosition} sliderImage={sliderImage} />
         );
       })}
-    </div>
+    </>
   );
 }

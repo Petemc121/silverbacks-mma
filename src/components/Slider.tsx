@@ -22,7 +22,7 @@ export default function Slider() {
       id: 2,
       src: lineup,
       textID: "welcome",
-      heading: "WELCOME TO SILVERBACKS",
+      heading: "We're not a team, we're a family",
       paragraph:
         "Join the family, and become part of one of the leading jiujitsu and MMA gyms in Kent!",
       button: true,
@@ -30,28 +30,25 @@ export default function Slider() {
     {
       id: 3,
       src: GandP,
-      textID: "nogi",
-      heading: "WELCOME TO SILVERBACKS",
-      paragraph:
-        "Join the family, and become part of one of the leading jiujitsu and MMA gyms in Kent!",
+      textID: "GandP",
+      heading: "MMA CLASSES",
+      paragraph: "Brush up on your striking every monday with our MMA classes.",
       button: true,
     },
     {
       id: 4,
       src: kids,
       textID: "kids",
-      heading: "WELCOME TO SILVERBACKS",
-      paragraph:
-        "Join the family, and become part of one of the leading jiujitsu and MMA gyms in Kent!",
+      heading: "KIDS WELCOME!",
+      paragraph: "Check out our frequent schedule for kids jiujitsu classes.",
       button: true,
     },
     {
       id: 5,
       src: nogi,
       textID: "kids",
-      heading: "WELCOME TO SILVERBACKS",
-      paragraph:
-        "Join the family, and become part of one of the leading jiujitsu and MMA gyms in Kent!",
+      heading: "Grappling",
+      paragraph: "Silverbacks caters to both gi and no gi!",
       button: true,
     },
   ];
