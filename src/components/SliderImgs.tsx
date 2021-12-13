@@ -2,15 +2,28 @@ import React from "react";
 import SliderImg from "./SliderImg";
 
 interface sliderImagesInput {
-  sliderImages: { id: number; src: string; textID: string }[];
+  sliderImages: {
+    id: number;
+    src: string;
+    textID: string;
+    heading: string;
+    paragraph: string;
+    button: boolean;
+  }[];
+  slidePosition: number;
 }
 
-export default function SliderImgs({ sliderImages }: sliderImagesInput) {
+export default function SliderImgs({
+  sliderImages,
+  slidePosition,
+}: sliderImagesInput) {
   return (
-    <>
+    <div>
       {sliderImages.map((sliderImage) => {
-        return <SliderImg sliderImage={sliderImage} />;
+        return (
+          <SliderImg slidePosition={slidePosition} sliderImage={sliderImage} />
+        );
       })}
-    </>
+    </div>
   );
 }
