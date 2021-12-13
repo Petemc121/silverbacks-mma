@@ -20,8 +20,6 @@ p {
 }
 
 .App {
-  width: 80%;
-  margin: 0px auto;
   overflow: hidden;
 }
 
@@ -31,9 +29,10 @@ p {
   align-items: center;
   line-height: 60px;
   height: 70px;
-  width: 80%;
-  margin: 0px auto;
+  width: 90%;
+  margin: 20px auto;
   color: white;
+  font-size: 20px;
 }
 
 #logo {
@@ -59,37 +58,47 @@ p {
 }
 
 #slider {
-  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: -100;
+}
+
+#holder {
   position: absolute;
-  z-index: -1;
-  width: 800%;
+  top: 0px;
+  width: 600%;
   display: flex;
 }
 
 .blackout {
-  height: 100%;
-  width: 10%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   background-color: black;
   opacity: 40%;
 }
 
 .sliderImg {
-  width: 100%;
-  height: 1200px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .imageContainer {
-  width: 10%;
+  width: 100vw;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  float: left;
 }
 
 .imageText {
   position: absolute;
-  font-size: 30px;
+  font-size: 20px;
   color: white;
+  z-index: 2;
 }
 
 #welcome {
@@ -121,10 +130,20 @@ p {
 }
 
 .circle {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   cursor: pointer;
   background-color: white;
+  margin: 0px 10px;
   z-index: 2;
+}
+
+#circleContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 35%;
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
 }

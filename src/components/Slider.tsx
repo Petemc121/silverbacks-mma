@@ -55,16 +55,20 @@ export default function Slider() {
 
   return (
     <div id="slider">
-      <SliderImgs slidePosition={slidePosition} sliderImages={sliderImages} />
-      {sliderImages.map((sliderImage) => {
-        return (
-          <div
-            key={sliderImage.id}
-            id={sliderImage.id.toString(10)}
-            className="circle"
-          ></div>
-        );
-      })}
+      <div id="holder">
+        <SliderImgs slidePosition={slidePosition} sliderImages={sliderImages} />
+        <div id="circleContainer">
+          {sliderImages.map((sliderImage) => {
+            return (
+              <div
+                key={sliderImage.id}
+                id={sliderImage.id.toString(10)}
+                className="circle"
+              ></div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
