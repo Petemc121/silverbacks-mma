@@ -5,9 +5,11 @@ import Slider from "./components/Slider";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Slider />
-      <div style={{ height: "400px", width: "auto" }}></div>
+      <div id="headerSliderContainer">
+        <Header />
+        <Slider />
+      </div>
+      <div style={{ width: "100%", height: "400px" }}></div>
     </div>
   );
 }

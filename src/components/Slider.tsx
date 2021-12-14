@@ -18,15 +18,17 @@ export default function Slider() {
       paragraph:
         "Join the family, and become part of one of the leading jiujitsu and MMA gyms in Kent!",
       button: true,
+      imageContainerContent: "center",
     },
     {
       id: 1,
       src: lineup,
-      textID: "welcome",
+      textID: "family",
       heading: "We're not a team, we're a family",
       paragraph:
         "Join the family, and become part of one of the leading jiujitsu and MMA gyms in Kent!",
       button: false,
+      imageContainerContent: "flex-start",
     },
     {
       id: 2,
@@ -35,6 +37,7 @@ export default function Slider() {
       heading: "MMA CLASSES",
       paragraph: "Brush up on your striking every monday with our MMA classes.",
       button: true,
+      imageContainerContent: "center",
     },
     {
       id: 3,
@@ -43,6 +46,7 @@ export default function Slider() {
       heading: "KIDS WELCOME!",
       paragraph: "Check out our frequent schedule for kids jiujitsu classes.",
       button: true,
+      imageContainerContent: "center",
     },
     {
       id: 4,
@@ -51,6 +55,7 @@ export default function Slider() {
       heading: "Grappling",
       paragraph: "Silverbacks caters to both gi and no gi!",
       button: true,
+      imageContainerContent: "center",
     },
   ];
 

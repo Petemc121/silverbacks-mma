@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 
 interface sliderImageInput {
   sliderImage: {
@@ -9,6 +9,7 @@ interface sliderImageInput {
     heading: string;
     paragraph: string;
     button: boolean;
+    imageContainerContent: string;
   };
   slidePosition: string;
 }
@@ -17,19 +18,31 @@ export default function SliderImg({
   sliderImage,
   slidePosition,
 }: sliderImageInput) {
-  const welcome = useCallback((node) => {
-    if (node !== null) {
-      setTimeout(() => {
-        node.style.opacity = "1";
-      }, 100);
-    }
-  }, []);
+  const text = useCallback(
+    (node) => {
+      if (node !== null) {
+        if (slidePosition[0].includes(sliderImage.id.toString())) {
+          console.log(slidePosition);
+          console.log(sliderImage.id.toString());
+          setTimeout(() => {
+            node.style.opacity = "1";
+          }, 100);
+        } else {
+          node.style.opacity = "0";
+        }
+      }
+    },
+    [slidePosition, sliderImage.id]
+  );
 
   return (
-    <div className="imageContainer">
+    <div
+      className="imageContainer"
+      style={{ justifyContent: sliderImage.imageContainerContent }}
+    >
       <div className="blackout"></div>
       <img className="sliderImg" alt="mats" src={sliderImage.src}></img>
-      <div ref={welcome} id="welcome" className="imageText">
+      <div ref={text} id={sliderImage.textID} className="imageText">
         <h1>{sliderImage.heading}</h1>
         <p>{sliderImage.paragraph}</p>
         <button
