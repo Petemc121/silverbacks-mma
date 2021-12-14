@@ -10,7 +10,7 @@ interface sliderImageInput {
     paragraph: string;
     button: boolean;
   };
-  slidePosition: number;
+  slidePosition: string;
 }
 
 export default function SliderImg({

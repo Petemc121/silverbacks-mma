@@ -60,15 +60,16 @@ p {
 #slider {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  z-index: -100;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
 }
 
 #holder {
-  position: absolute;
-  top: 0px;
   width: 600%;
   display: flex;
+  position: relative;
+  transition: all 2s;
 }
 
 .blackout {
@@ -141,8 +142,11 @@ p {
 
 #circleContainer {
   position: absolute;
-  bottom: 10px;
-  left: 35%;
+  bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   width: 400px;
   display: flex;
   justify-content: space-evenly;
