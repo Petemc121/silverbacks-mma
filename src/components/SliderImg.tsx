@@ -40,19 +40,19 @@ export default function SliderImg({
       className="imageContainer"
       style={{ justifyContent: sliderImage.imageContainerContent }}
     >
-      <div className="blackout"></div>
       <img className="sliderImg" alt="mats" src={sliderImage.src}></img>
       <div ref={text} id={sliderImage.textID} className="imageText">
         <h1>{sliderImage.heading}</h1>
         <p>{sliderImage.paragraph}</p>
         <button
           style={{ display: sliderImage.button ? "block" : "none" }}
-          className="buttons"
+          className="buttons onBlackButtons"
           id="startNow"
         >
           Start Now!
         </button>
       </div>
+      <div className="blackout"></div>
     </div>
   );
 }

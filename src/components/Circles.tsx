@@ -10,7 +10,7 @@ interface circlesInput {
     paragraph: string;
     button: boolean;
   }[];
-  setSlidePosition: any;
+  setSlidePosition: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function Circles({

@@ -26,6 +26,8 @@ p {
 #headerSliderContainer {
   height: 100vh;
   width: 100vw;
+  margin-top: -20px;
+  max-width: 100%;
 }
 
 #header {
@@ -35,10 +37,11 @@ p {
   line-height: 60px;
   height: 70px;
   width: 90%;
-  margin: 20px auto;
   color: white;
   font-size: 20px;
   position: relative;
+  top: 30px;
+  margin: 0px auto;
   z-index: 3;
 }
 
@@ -62,18 +65,25 @@ p {
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navigations:hover {
+  color: rgb(7, 7, 184);
 }
 
 #slider {
   width: 100vw;
   height: 100vh;
+  max-width: 100%;
   position: absolute;
+  overflow: hidden;
   top: 0px;
   z-index: 1;
 }
 
 #holder {
-  width: 600%;
+  width: 500%;
   display: flex;
   position: relative;
   transition: all 2s;
@@ -82,6 +92,7 @@ p {
 .blackout {
   width: 100vw;
   height: 100vh;
+  max-width: 20%;
   position: absolute;
   background-color: black;
   opacity: 40%;
@@ -90,10 +101,12 @@ p {
 .sliderImg {
   width: 100vw;
   height: 100vh;
+  max-width: 100%;
 }
 
 .imageContainer {
   width: 100vw;
+  max-width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -131,11 +144,24 @@ p {
   height: 300px;
 }
 
+.onWhiteButtons {
+  border: 2px solid black;
+  color: black;
+}
+
+.onWhiteButtons:hover {
+  border: 2px solid black;
+  color: white;
+}
+
+.onBlackButtons {
+  border: 2px solid white;
+  color: white;
+}
+
 .buttons {
   height: 50px;
   background: none;
-  border: 2px solid white;
-  color: white;
   transition: all 0.2s;
   padding: 10px;
   margin: 20px auto;
@@ -144,18 +170,27 @@ p {
 }
 
 .buttons:hover {
-  background-color: white;
-  color: black;
+  background-color: rgb(7, 7, 184);
 }
 
 .circle {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   cursor: pointer;
   background-color: white;
   margin: 0px 10px;
   z-index: 2;
+  transition: all 0.5s;
+  border: 2px black solid;
+}
+
+.circle:hover {
+  background-color: rgb(7, 7, 184);
+}
+
+.circle:focus {
+  background-color: rgb(7, 7, 184);
 }
 
 #circleContainer {
@@ -168,4 +203,53 @@ p {
   width: 400px;
   display: flex;
   justify-content: space-evenly;
+}
+
+#instructorContainer {
+  display: flex;
+  align-items: center;
+}
+
+#gorillaContainer {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translate(200px);
+    opacity: 100%;
+  }
+}
+
+#gorillaDescription {
+  width: 30%;
+  margin: 0px auto;
+  height: 30%;
+  line-height: 40px;
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gorillaDescription-animation {
+    animation: slidein 1s infinite;
+  }
+}
+
+#paul {
+  width: 50%;
+}
+
+#gorilla {
+  width: 50%;
+}
+
+#instructorsDescription {
+  width: 30%;
+  margin: 0px auto;
+  height: 30%;
+  line-height: 40px;
 }

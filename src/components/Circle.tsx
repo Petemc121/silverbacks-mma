@@ -18,11 +18,11 @@ export default function Circle({ sliderImage, setSlidePosition }: circleInput) {
     setSlidePosition(sliderImage.id + "00%");
   }
   return (
-    <div
+    <button
       key={sliderImage.id}
       id={sliderImage.id.toString(10)}
       className="circle"
       onClick={handleSliderPosition}
-    ></div>
+    ></button>
   );
 }
