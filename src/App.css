@@ -205,6 +205,64 @@ p {
   justify-content: space-evenly;
 }
 
+#paul {
+  width: 50%;
+}
+
+#gorilla {
+  width: 50%;
+}
+
+#gorillaDescription {
+  width: 30%;
+  margin: 0px auto;
+  height: 30%;
+  line-height: 40px;
+  position: relative;
+  opacity: 0;
+  right: 200px;
+}
+
+#instructorsDescription {
+  width: 30%;
+  margin: 0px auto;
+  height: 30%;
+  line-height: 40px;
+  position: relative;
+  left: 200px;
+  opacity: 0;
+}
+
+@media (max-width: 860px) {
+  #instructorContainer {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  #gorillaContainer {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  #gorillaDescription {
+    width: 50%;
+    order: 2;
+    margin: 50px 0px;
+  }
+  #instructorsDescription {
+    width: 50%;
+    margin: 50px 0px;
+  }
+
+  #paul {
+    width: 100%;
+  }
+  #gorilla {
+    width: 100%;
+    order: 1;
+  }
+}
+
 #instructorContainer {
   margin-top: 20px;
   display: flex;
@@ -235,6 +293,7 @@ p {
     opacity: 100%;
   }
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .instructorDescription-animation {
     animation: slideleft 1s forwards;
@@ -243,32 +302,4 @@ p {
   .gorillaDescription-animation {
     animation: slideright 1s forwards;
   }
-}
-
-#gorillaDescription {
-  width: 30%;
-  margin: 0px auto;
-  height: 30%;
-  line-height: 40px;
-  position: relative;
-  opacity: 0;
-  right: 200px;
-}
-
-#paul {
-  width: 50%;
-}
-
-#gorilla {
-  width: 50%;
-}
-
-#instructorsDescription {
-  width: 30%;
-  margin: 0px auto;
-  height: 30%;
-  line-height: 40px;
-  position: relative;
-  left: 200px;
-  opacity: 0;
 }
