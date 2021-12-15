@@ -6,7 +6,7 @@ interface descriptionInputs {
 }
 
 export default function Description({ inputs }: descriptionInputs) {
-  const { ref, inView, entry } = useInView();
+  const { ref, inView } = useInView();
 
   return (
     <div
