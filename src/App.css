@@ -206,6 +206,7 @@ p {
 }
 
 #instructorContainer {
+  margin-top: 20px;
   display: flex;
   align-items: center;
 }
@@ -215,13 +216,32 @@ p {
   align-items: center;
 }
 
-@keyframes slidein {
+@keyframes slideleft {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translate(-200px);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideright {
   from {
     transform: translate(0px);
   }
   to {
     transform: translate(200px);
     opacity: 100%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .instructorDescription-animation {
+    animation: slideleft 1s forwards;
+  }
+
+  .gorillaDescription-animation {
+    animation: slideright 1s forwards;
   }
 }
 
@@ -231,12 +251,8 @@ p {
   height: 30%;
   line-height: 40px;
   position: relative;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .gorillaDescription-animation {
-    animation: slidein 1s infinite;
-  }
+  opacity: 0;
+  right: 200px;
 }
 
 #paul {
@@ -252,4 +268,7 @@ p {
   margin: 0px auto;
   height: 30%;
   line-height: 40px;
+  position: relative;
+  left: 200px;
+  opacity: 0;
 }
