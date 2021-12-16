@@ -9,6 +9,7 @@ interface sliderImagesInput {
     heading: string;
     paragraph: string;
     button: boolean;
+    buttonText: string;
     imageContainerContent: string;
   }[];
   slidePosition: string;

@@ -9,6 +9,7 @@ interface sliderImageInput {
     heading: string;
     paragraph: string;
     button: boolean;
+    buttonText: string;
     imageContainerContent: string;
   };
   slidePosition: string;
@@ -49,7 +50,7 @@ export default function SliderImg({
           className="buttons onBlackButtons"
           id="startNow"
         >
-          Start Now!
+          {sliderImage.buttonText}
         </button>
       </div>
       <div className="blackout"></div>

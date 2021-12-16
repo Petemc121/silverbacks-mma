@@ -122,6 +122,12 @@ p {
   opacity: 0;
   transition: opacity 3s;
   height: 300px;
+  margin-left: 50px;
+  margin-top: 600px;
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 #welcome {
@@ -130,16 +136,10 @@ p {
   align-items: center;
   justify-content: space-between;
   font-family: "sora";
-}
-
-#family {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  font-family: "sora";
-  margin-left: 50px;
-  margin-top: 300px;
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 0px;
+  line-height: 45px;
 }
 
 .onWhiteButtons {
@@ -158,11 +158,10 @@ p {
 }
 
 .buttons {
-  height: 50px;
+  height: auto;
   background: none;
   transition: all 0.2s;
   padding: 10px;
-  margin: 20px auto;
   font-size: 20px;
   cursor: pointer;
 }
@@ -267,15 +266,12 @@ p {
     width: 80%;
   }
 
-  #family {
-    margin-top: 0px;
-    width: 200px;
-  }
-
   .imageText {
-    font-size: 10px;
-    max-width: 300px;
+    font-size: 15px;
+    max-width: 500px;
     height: 100px;
+    margin-top: 100px;
+    line-height: 50px;
   }
 
   .imageContainer {
@@ -296,17 +292,14 @@ p {
     width: 50%;
     margin: 50px 0px;
     order: 1;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 40px;
   }
   #instructorsDescription {
     width: 50%;
     margin: 80px 0px;
-    font-size: 10px;
-    line-height: 25px;
-  }
-
-  #gorillaDescription {
-    font-size: 10px;
+    font-size: 15px;
+    line-height: 40px;
   }
 
   #paul {
@@ -319,6 +312,38 @@ p {
   }
 }
 
+@media (max-width: 400px) {
+  #gymTitle {
+    display: none;
+  }
+
+  .imageText {
+    font-size: 10px;
+    max-width: 200px;
+    margin-top: 0px;
+    height: 100px;
+    line-height: 25px;
+  }
+
+  #welcome {
+    line-height: 20px;
+  }
+
+  #gorillaDescription {
+    width: 50%;
+    margin: 50px 0px;
+    order: 1;
+    font-size: 10px;
+    line-height: 40px;
+  }
+  #instructorsDescription {
+    width: 50%;
+    margin: 80px 0px;
+    font-size: 10px;
+    line-height: 40px;
+  }
+}
+
 #instructorContainer {
   margin-top: 20px;
   display: flex;
@@ -328,12 +353,6 @@ p {
 #gorillaContainer {
   display: flex;
   align-items: center;
-}
-
-@media (max-width: 400px) {
-  #gymTitle {
-    display: none;
-  }
 }
 
 @keyframes slideleft {
