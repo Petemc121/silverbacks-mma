@@ -26,7 +26,6 @@ p {
 #headerSliderContainer {
   height: 100vh;
   width: 100vw;
-  margin-top: -20px;
   max-width: 100%;
 }
 
@@ -49,6 +48,11 @@ p {
   width: 60px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
 }
 
 #headerRight {
@@ -82,6 +86,16 @@ p {
   z-index: 1;
 }
 
+.heroContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  z-index: 1;
+}
+
 #holder {
   width: 500%;
   display: flex;
@@ -92,10 +106,13 @@ p {
 .blackout {
   width: 100vw;
   height: 100%;
-  max-width: 20%;
   position: absolute;
   background-color: black;
   opacity: 40%;
+}
+
+.blackoutSlide {
+  max-width: 20%;
 }
 
 .sliderImg {
@@ -230,17 +247,18 @@ p {
   opacity: 0;
 }
 
+#aboutText {
+  left: 10%;
+  margin-top: -150px;
+  width: 80%;
+}
+
 @media (max-width: 950px) {
   .navigations {
     display: none;
   }
   #slider {
     height: 50vh;
-  }
-
-  .buttons {
-    height: auto;
-    font-size: 10px;
   }
   #gymTitle {
     font-size: 20px;
@@ -255,6 +273,12 @@ p {
 
   .sliderImg {
     height: 50vh;
+  }
+
+  #aboutText {
+    line-height: 30px;
+    font-size: 15px;
+    width: 80%;
   }
 
   .circle {
@@ -274,17 +298,26 @@ p {
     line-height: 50px;
   }
 
+  #aboutHeroContainer {
+    height: 70vh;
+  }
+
   .imageContainer {
     height: 50vh;
   }
 
+  #aboutImageContainer {
+    height: 70vh;
+  }
+  #aboutImage {
+    height: 70vh;
+  }
+
   #instructorContainer {
-    margin-top: 20px;
     flex-direction: column;
   }
 
   #gorillaContainer {
-    margin-top: 20px;
     flex-direction: column;
   }
 
@@ -345,7 +378,6 @@ p {
 }
 
 #instructorContainer {
-  margin-top: 20px;
   display: flex;
   align-items: center;
 }

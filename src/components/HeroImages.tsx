@@ -1,30 +1,31 @@
 import React from "react";
-import SliderImg from "./SliderImg";
+import Image from "./HeroImage";
 
 interface sliderImagesInput {
-  sliderImages: {
+  heroImages: {
     id: number;
     src: string;
+    slide: boolean;
     textID: string;
+    imageID: string;
     heading: string;
     paragraph: string;
     button: boolean;
     buttonText: string;
+    imageContainerID: string;
     imageContainerContent: string;
   }[];
-  slidePosition: string;
+  slidePosition?: string;
 }
 
 export default function SliderImgs({
-  sliderImages,
+  heroImages,
   slidePosition,
 }: sliderImagesInput) {
   return (
     <>
-      {sliderImages.map((sliderImage) => {
-        return (
-          <SliderImg slidePosition={slidePosition} sliderImage={sliderImage} />
-        );
+      {heroImages.map((heroImage) => {
+        return <Image slidePosition={slidePosition} heroImage={heroImage} />;
       })}
     </>
   );

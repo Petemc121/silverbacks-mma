@@ -1,7 +1,7 @@
 import React from "react";
 
 interface circleInput {
-  sliderImage: {
+  heroImage: {
     id: number;
     src: string;
     textID: string;
@@ -13,14 +13,14 @@ interface circleInput {
   setSlidePosition: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function Circle({ sliderImage, setSlidePosition }: circleInput) {
+export default function Circle({ heroImage, setSlidePosition }: circleInput) {
   function handleSliderPosition() {
-    setSlidePosition(sliderImage.id + "00%");
+    setSlidePosition(heroImage.id + "00%");
   }
   return (
     <button
-      key={sliderImage.id}
-      id={sliderImage.id.toString(10)}
+      key={heroImage.id}
+      id={heroImage.id.toString(10)}
       className="circle"
       onClick={handleSliderPosition}
     ></button>

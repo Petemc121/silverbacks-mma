@@ -2,7 +2,7 @@ import React from "react";
 import Circle from "./Circle";
 
 interface circlesInput {
-  sliderImages: {
+  heroImages: {
     id: number;
     src: string;
     textID: string;
@@ -14,17 +14,14 @@ interface circlesInput {
 }
 
 export default function Circles({
-  sliderImages,
+  heroImages,
   setSlidePosition,
 }: circlesInput) {
   return (
     <div id="circleContainer">
-      {sliderImages.map((sliderImage) => {
+      {heroImages.map((heroImage) => {
         return (
-          <Circle
-            setSlidePosition={setSlidePosition}
-            sliderImage={sliderImage}
-          />
+          <Circle setSlidePosition={setSlidePosition} heroImage={heroImage} />
         );
       })}
     </div>
