@@ -29,6 +29,12 @@ p {
   max-width: 100%;
 }
 
+#aboutContainer {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
 #header {
   display: flex;
   justify-content: space-between;
@@ -40,6 +46,7 @@ p {
   font-size: 20px;
   position: relative;
   top: 30px;
+  left: auto;
   margin: 0px auto;
   z-index: 3;
 }
@@ -79,19 +86,28 @@ p {
 }
 
 #hamburger:hover {
-  color: blue;
+  color: rgb(7, 7, 184);
 }
 
 #hamburgerNavigationsContainer {
-  position: absolute;
+  position: fixed;
   right: -220px;
-  top: -30px;
-  background-color: blue;
+  top: 0px;
+  background-color: rgb(7, 7, 184);
   height: 100vh;
   width: 150px;
   transition: all 1s;
   padding: 10px;
   display: none;
+}
+
+.hamburgerNavigation {
+  position: relative;
+  transition: all 0.5s;
+}
+
+.hamburgerNavigation:hover {
+  transform: translate(5px);
 }
 
 #hamburgerBackground {
@@ -285,6 +301,36 @@ p {
   flex-direction: column;
   justify-content: space-between;
   height: 50%;
+  font-weight: bold;
+  white-space: pre-wrap;
+}
+
+#aboutHeaderSliderContainer {
+  height: 100vh;
+}
+
+#instructorListContainer {
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructorBios {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.instructorBio {
+  width: 20%;
+  text-align: center;
+}
+
+.bioImage {
+  border-radius: 50%;
+  width: 200px;
+  height: auto;
 }
 
 @media (max-width: 950px) {
@@ -299,6 +345,12 @@ p {
   }
   #headerSliderContainer {
     height: 50vh;
+  }
+  #aboutHeroContainer {
+    height: 70vh;
+  }
+  #aboutHeaderSliderContainer {
+    height: 70vh;
   }
 
   #holder {
@@ -318,7 +370,7 @@ p {
     width: 90%;
     max-width: 80%;
     margin-top: -100px;
-    height: 60%;
+    height: 50%;
   }
 
   .circle {
@@ -401,6 +453,10 @@ p {
   }
 
   #aboutHeroContainer {
+    height: 100vh;
+  }
+
+  #aboutHeaderSliderContainer {
     height: 100vh;
   }
 

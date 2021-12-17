@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function Hamburger() {
   const [hamburgerActive, setHamburgerActive] = useState(false);
@@ -27,14 +28,18 @@ export default function Hamburger() {
         onClick={handleBackgroundClick}
       ></div>
       <div
-        style={{ right: hamburgerActive ? "-80px" : "-240px" }}
+        style={{ right: hamburgerActive ? "-40px" : "-240px" }}
         id="hamburgerNavigationsContainer"
       >
-        <div className="hamburgerNavigation">Home</div>
-        <div className="hamburgerNavigation">About</div>
+        <Link className="links" to="/">
+          <div className="hamburgerNavigation">Home</div>
+        </Link>
+        <Link className="links" to="/about">
+          <div className="hamburgerNavigation">About</div>
+        </Link>
         <div className="hamburgerNavigation">Gallery</div>
         <div className="hamburgerNavigation">Schedule</div>
-        <div className="hamburgerNavigation">Loaction</div>
+        <div className="hamburgerNavigation">Location</div>
       </div>
     </div>
   );

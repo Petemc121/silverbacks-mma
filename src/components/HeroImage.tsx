@@ -40,6 +40,8 @@ export default function SliderImg({
     [slidePosition, heroImage.id]
   );
 
+  console.log(heroImage.paragraph);
+
   return (
     <div
       className="imageContainer"
