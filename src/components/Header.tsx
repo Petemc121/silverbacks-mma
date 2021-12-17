@@ -1,5 +1,6 @@
 import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
+import Hamburger from "./Hamburger";
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
       </div>
 
       <div id="headerRight">
+        <Hamburger />
         <Link className="links" to="/">
           <div className="navigations">Home</div>
         </Link>

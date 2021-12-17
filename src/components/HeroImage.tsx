@@ -43,7 +43,7 @@ export default function SliderImg({
   return (
     <div
       className="imageContainer"
-      id="aboutImageContainer"
+      id={heroImage.imageContainerID}
       style={{ justifyContent: heroImage.imageContainerContent }}
     >
       <img

@@ -72,6 +72,36 @@ p {
   transition: all 0.5s;
 }
 
+#hamburger {
+  display: none;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+#hamburger:hover {
+  color: blue;
+}
+
+#hamburgerNavigationsContainer {
+  position: absolute;
+  right: -220px;
+  top: -30px;
+  background-color: blue;
+  height: 100vh;
+  width: 150px;
+  transition: all 1s;
+  padding: 10px;
+  display: none;
+}
+
+#hamburgerBackground {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
 .navigations:hover {
   color: rgb(7, 7, 184);
 }
@@ -251,6 +281,10 @@ p {
   left: 10%;
   margin-top: -150px;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
 }
 
 @media (max-width: 950px) {
@@ -271,14 +305,20 @@ p {
     height: 50vh;
   }
 
-  .sliderImg {
-    height: 50vh;
+  #hamburger {
+    display: block;
+  }
+  #hamburgerNavigationsContainer {
+    display: block;
   }
 
   #aboutText {
     line-height: 30px;
-    font-size: 15px;
-    width: 80%;
+    font-size: 13px;
+    width: 90%;
+    max-width: 80%;
+    margin-top: -100px;
+    height: 60%;
   }
 
   .circle {
@@ -348,6 +388,27 @@ p {
 @media (max-width: 400px) {
   #gymTitle {
     display: none;
+  }
+
+  #aboutText {
+    line-height: 20px;
+    font-size: 10px;
+    width: 90%;
+    max-width: 80%;
+    margin-top: 0px;
+    height: 60%;
+    left: -5%;
+  }
+
+  #aboutHeroContainer {
+    height: 100vh;
+  }
+
+  #aboutImageContainer {
+    height: 100vh;
+  }
+  #aboutImage {
+    height: 100vh;
   }
 
   .imageText {

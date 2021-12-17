@@ -22,7 +22,7 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <div className="App">
       <div id="headerSliderContainer">
         <Header />
         <Slider />
