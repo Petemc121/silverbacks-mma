@@ -37,9 +37,15 @@ export default function Hamburger() {
         <Link className="links" to="/about">
           <div className="hamburgerNavigation">About</div>
         </Link>
-        <div className="hamburgerNavigation">Gallery</div>
-        <div className="hamburgerNavigation">Schedule</div>
-        <div className="hamburgerNavigation">Location</div>
+        <Link className="links" to="/gallery">
+          <div className="hamburgerNavigation">Gallery</div>
+        </Link>
+        <Link className="links" to="/schedule">
+          <div className="hamburgerNavigation">Schedule</div>
+        </Link>
+        <Link className="links" to="/location">
+          <div className="hamburgerNavigation">Location</div>
+        </Link>
       </div>
     </div>
   );
