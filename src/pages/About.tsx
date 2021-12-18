@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Gorilla from "../images/gorilla.png";
 import HeroImage from "../components/HeroImage";
+import InstructorBios from "../components/InstructorBios";
 import Aron from "../images/Aron.png";
 import Paul from "../images/paul.png";
 import GandP from "../images/GandP.png";
@@ -25,6 +26,32 @@ We have beginners, advanced and kids classes for Brazilian Jiu Jitsu. Our MMA cl
     imageContainerContent: "center",
   };
 
+  const instructorBios = [
+    {
+      id: 1,
+      image: Paul,
+      name: "Paul McGinty",
+      title: "Founder & head coach",
+      text: `Brazilian Jiu Jitsu black belt and professional MMA fighter. A multiple time Jiu Jitsu champion and medalist at IBJJF tournaments and Adu Dhabi world professional Jiu Jitsu tournaments.`,
+    },
+    {
+      id: 2,
+      image: Aron,
+      name: "Aron Soto",
+      title: "Founder & Bjj Coach",
+      text: `Brazilian Jiu Jitsu brown belt. Abu Dhabi Pro trials champion,
+        English Open champion, Grapplers showdown champion and Ringmasters
+        MMA finalist.`,
+    },
+    {
+      id: 3,
+      image: GandP,
+      name: "Paul Attwood",
+      title: "MMA & BJJ Coach",
+      text: `Brazilian Jiu Jitsu brown belt and professional MMA fighter. ICO  British and European welterweight Champion. Ringmasters Welterweight champion.`,
+    },
+  ];
+
   return (
     <div className="App">
       <div id="aboutHeaderSliderContainer">
@@ -35,30 +62,7 @@ We have beginners, advanced and kids classes for Brazilian Jiu Jitsu. Our MMA cl
       </div>
       <div id="instructorListContainer">
         <div className="instructorBios">
-          <div className="instructorBio">
-            <img alt="Paul" className="bioImage" src={Paul}></img>
-            <div className="bioDescription">
-              Brazilian Jiu Jitsu brown belt. Abu Dhabi Pro trials champion,
-              English Open champion, Grapplers showdown champion and Ringmasters
-              MMA finalist.
-            </div>
-          </div>
-          <div className="instructorBio">
-            <img alt="Aron" className="bioImage" src={Aron}></img>
-            <div className="bioDescription">
-              Brazilian Jiu Jitsu brown belt. Abu Dhabi Pro trials champion,
-              English Open champion, Grapplers showdown champion and Ringmasters
-              MMA finalist.
-            </div>
-          </div>
-          <div className="instructorBio">
-            <img alt="GandP" className="bioImage" src={GandP}></img>
-            <div className="bioDescription">
-              Brazilian Jiu Jitsu brown belt. Abu Dhabi Pro trials champion,
-              English Open champion, Grapplers showdown champion and Ringmasters
-              MMA finalist.
-            </div>
-          </div>
+          <InstructorBios instructorBios={instructorBios} />
         </div>
       </div>
     </div>

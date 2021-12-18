@@ -310,7 +310,7 @@ p {
 }
 
 #instructorListContainer {
-  height: 500px;
+  height: 700px;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -325,17 +325,42 @@ p {
 .instructorBio {
   width: 20%;
   text-align: center;
+  opacity: 0%;
+  transition: opacity 3s;
+}
+
+.instructorText {
+  margin: 20px 0px;
+}
+
+.instructorName {
+  font-size: 25px;
+  color: rgb(7, 7, 184);
+}
+
+.instructorTitle {
+  font-size: 20px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.bioDescription {
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .bioImage {
   border-radius: 50%;
-  width: 200px;
+  width: 250px;
   height: auto;
 }
 
 @media (max-width: 950px) {
   .navigations {
     display: none;
+  }
+  .bioImage {
+    width: 200px;
   }
   #slider {
     height: 50vh;
@@ -531,5 +556,9 @@ p {
 
   .gorillaDescription-animation {
     animation: slideright 1s forwards;
+  }
+
+  .instructorBio-animation {
+    opacity: 100%;
   }
 }
