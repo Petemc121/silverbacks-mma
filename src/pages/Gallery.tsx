@@ -19,6 +19,19 @@ export default function Gallery() {
     imageContainerContent: "center",
   };
 
+  function importAll(r: any): any[] {
+    let images = {} as any;
+    r.keys().map((item: any) => {
+      return (images[item.replace("./", "")] = r(item));
+    });
+    return images as any;
+  }
+
+  const images = importAll(
+    require.context("../images/silverbacks-gallery/", false, /\.png/)
+  );
+  console.log(images);
+
   return (
     <div className="App">
       <div id="aboutHeaderSliderContainer">
@@ -28,7 +41,7 @@ export default function Gallery() {
         </div>
       </div>
       <div id="gallery">
-        <GalleryImages />
+        <GalleryImages images={images} />
       </div>
     </div>
   );

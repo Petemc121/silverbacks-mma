@@ -1,5 +1,14 @@
 import React from "react";
 
-export default function GalleryImage() {
-  return <div></div>;
+interface galleryImageInput {
+  image: any;
+}
+
+export default function GalleryImage({ image }: galleryImageInput) {
+  console.log("image " + image);
+  return (
+    <>
+      <img alt="galleryImage" src={image} />
+    </>
+  );
 }
