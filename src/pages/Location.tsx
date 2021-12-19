@@ -9,7 +9,7 @@ export default function Location() {
     src: gorilla,
     slide: false,
     imageID: "",
-    textID: "",
+    textID: "otherText",
     heading: "Location",
     paragraph: ``,
     button: false,

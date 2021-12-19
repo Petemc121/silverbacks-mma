@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import HeroImage from "../components/HeroImage";
 import sparring from "../images/sparring.png";
+import GalleryImages from "../components/GalleryImages";
 
 export default function Gallery() {
   const imgProps = {
@@ -9,7 +10,7 @@ export default function Gallery() {
     src: sparring,
     slide: false,
     imageID: "",
-    textID: "",
+    textID: "otherText",
     heading: "Gallery",
     paragraph: ``,
     button: false,
@@ -25,6 +26,9 @@ export default function Gallery() {
         <div className="heroContainer" id="aboutHeroContainer">
           <HeroImage slidePosition={"1"} heroImage={imgProps} />
         </div>
+      </div>
+      <div id="gallery">
+        <GalleryImages />
       </div>
     </div>
   );

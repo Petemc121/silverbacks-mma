@@ -8,7 +8,7 @@ export default function Schedule() {
     src: warmups,
     slide: false,
     imageID: "",
-    textID: "",
+    textID: "otherText",
     heading: "Schedule",
     paragraph: ``,
     button: false,

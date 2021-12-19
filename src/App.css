@@ -162,7 +162,7 @@ p {
   height: 100%;
   position: absolute;
   background-color: black;
-  opacity: 40%;
+  opacity: 50%;
 }
 
 .blackoutSlide {
@@ -313,6 +313,11 @@ p {
   white-space: pre-wrap;
 }
 
+#otherText {
+  margin-top: 150px;
+  margin-left: 0px;
+}
+
 #aboutHeaderSliderContainer {
   height: 100vh;
 }
@@ -369,6 +374,9 @@ p {
   }
   .bioImage {
     width: 200px;
+  }
+  #otherText {
+    margin-top: 50px;
   }
   #slider {
     height: 70vh;
