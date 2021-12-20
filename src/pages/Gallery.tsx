@@ -1,11 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import Header from "../components/Header";
 import HeroImage from "../components/HeroImage";
 import sparring from "../images/sparring.png";
 import GalleryImages from "../components/GalleryImages";
+import GalleryImage from "../components/GalleryImage";
 import importedGalleryImages from "../images/ImportedGallery";
 
 export default function Gallery() {
+  const [imgClicked, setImgClicked] = useState("none");
   const imgProps = {
     id: 1,
     src: sparring,
@@ -28,8 +30,22 @@ export default function Gallery() {
           <HeroImage slidePosition={"1"} heroImage={imgProps} />
         </div>
       </div>
-      <div id="gallery">
-        <GalleryImages images={importedGalleryImages} />
+      <div id="galleryImagesContainer">
+        <GalleryImages
+          setImgClicked={setImgClicked}
+          images={importedGalleryImages}
+        />
+      </div>
+
+      <div
+        style={{ display: imgClicked !== "none" ? "flex" : "none" }}
+        id="gallerySliderContainer"
+      >
+        <div id={"gallerySlideImageBackground"}></div>
+        <GalleryImage
+          imageID={parseInt(imgClicked)}
+          image={importedGalleryImages[parseInt(imgClicked)]}
+        />
       </div>
     </div>
   );

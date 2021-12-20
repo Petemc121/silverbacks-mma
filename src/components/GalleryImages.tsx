@@ -3,16 +3,26 @@ import GalleryImage from "./GalleryImage";
 
 interface galleryImagesInput {
   images: any[];
+  setImgClicked: any;
 }
 
-export default function GalleryImages({ images }: galleryImagesInput) {
+export default function GalleryImages({
+  images,
+  setImgClicked,
+}: galleryImagesInput) {
   console.log(images);
   return (
-    <div id="galleryImagesContainer">
-      {images.map((image) => {
+    <>
+      {images.map((image, index) => {
         console.log(image);
-        return <GalleryImage image={image} />;
+        return (
+          <GalleryImage
+            imageID={index}
+            setImgClicked={setImgClicked}
+            image={image}
+          />
+        );
       })}
-    </div>
+    </>
   );
 }
