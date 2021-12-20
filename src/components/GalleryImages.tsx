@@ -17,6 +17,7 @@ export default function GalleryImages({
         console.log(image);
         return (
           <GalleryImage
+            imageClass={"galleryImage"}
             imageID={index}
             setImgClicked={setImgClicked}
             image={image}

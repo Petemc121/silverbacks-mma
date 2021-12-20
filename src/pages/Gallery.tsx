@@ -22,6 +22,10 @@ export default function Gallery() {
     imageContainerContent: "center",
   };
 
+  function resetImg() {
+    setImgClicked("none");
+  }
+
   return (
     <div className="App">
       <div id="aboutHeaderSliderContainer">
@@ -41,8 +45,9 @@ export default function Gallery() {
         style={{ display: imgClicked !== "none" ? "flex" : "none" }}
         id="gallerySliderContainer"
       >
-        <div id={"gallerySlideImageBackground"}></div>
+        <div onClick={resetImg} id={"gallerySlideImageBackground"}></div>
         <GalleryImage
+          imageClass={"slideGalleryImage"}
           imageID={parseInt(imgClicked)}
           image={importedGalleryImages[parseInt(imgClicked)]}
         />
