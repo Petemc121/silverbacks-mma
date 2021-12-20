@@ -591,3 +591,39 @@ p {
     animation: fadein 2s forwards;
   }
 }
+
+#gallery {
+  display: flex;
+  justify-content: center;
+}
+
+#galleryImagesContainer {
+  width: 80%;
+
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 5;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  column-count: 5;
+  column-gap: 0px;
+  margin-top: 50px;
+}
+
+#galleryImagesContainer img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+.galleryImage {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.galleryImage:hover {
+  opacity: 0.5;
+}

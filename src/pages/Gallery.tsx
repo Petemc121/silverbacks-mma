@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import HeroImage from "../components/HeroImage";
 import sparring from "../images/sparring.png";
 import GalleryImages from "../components/GalleryImages";
+import importedGalleryImages from "../images/ImportedGallery";
 
 export default function Gallery() {
   const imgProps = {
@@ -19,19 +20,6 @@ export default function Gallery() {
     imageContainerContent: "center",
   };
 
-  function importAll(r: any): any[] {
-    let images = {} as any;
-    r.keys().map((item: any) => {
-      return (images[item.replace("./", "")] = r(item));
-    });
-    return images as any;
-  }
-
-  const images = importAll(
-    require.context("../images/silverbacks-gallery/", false, /\.png/)
-  );
-  console.log(images);
-
   return (
     <div className="App">
       <div id="aboutHeaderSliderContainer">
@@ -41,7 +29,7 @@ export default function Gallery() {
         </div>
       </div>
       <div id="gallery">
-        <GalleryImages images={images} />
+        <GalleryImages images={importedGalleryImages} />
       </div>
     </div>
   );
