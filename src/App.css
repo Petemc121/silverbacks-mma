@@ -375,6 +375,7 @@ p {
   .bioImage {
     width: 200px;
   }
+
   #otherText {
     margin-top: 50px;
   }
@@ -701,14 +702,16 @@ p {
   display: grid;
   grid-template-rows:
     [head-days] 0.5fr
-    [time-0600] 0.5fr
     [time-0630] 0.5fr
     [time-0700] 0.5fr
     [time-0730] 0.5fr
     [time-0800] 0.5fr
     [time-0830] 0.5fr
-    [time-1630] 0.75fr
-    [time-1715] 0.75fr
+    [time-1600] 0.5fr
+    [time-1630] 0.5fr
+    [time-1700] 0.25fr
+    [time-1715] 0.25fr
+    [time-1730] 0.5fr
     [time-1800] 0.5fr
     [time-1830] 0.5fr
     [time-1900] 0.5fr
@@ -718,16 +721,18 @@ p {
     [time-2100] 0.5fr
     [time-2130] 0.5fr;
 
-  height: auto;
-  width: 60%;
-  margin-top: 100px;
+  height: 1000px;
+  width: 70%;
+  margin: 100px 0px;
   grid-template-columns:
-    [times] 10%
+    [times] 6em
     [track-1-start] 18%
     [track-1-end track-2-start] 18%
     [track-2-end track-3-start] 18%
     [track-3-end track-4-start] 18%
     [track-4-end] 18%;
+  gap: 5px;
+  justify-items: stretch;
 }
 
 .session {
@@ -735,12 +740,17 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border-radius: 5px;
+  padding: 0px;
+  font-size: 13px;
+  align-items: center;
 }
 
 .days {
   grid-row: head-days;
   text-align: center;
+  background-color: rgb(7, 7, 184);
+  color: white;
+  line-height: 60px;
 }
 .times {
   grid-column: times;
@@ -748,33 +758,38 @@ p {
 }
 
 .nogi {
-  background-color: brown;
-  grid-row: time-0600 / time-0730;
+  background-color: rgb(129, 26, 60);
+  grid-row: time-0630 / time-0800;
 }
 
 .nogiEvening {
-  background-color: brown;
+  background-color: rgb(129, 26, 60);
   grid-row: time-2000 / time-2130;
 }
 
 .gi {
-  background-color: green;
+  background-color: rgb(51, 117, 51);
   grid-row: time-2000 / time-2130;
 }
 
+.gi-early {
+  background-color: rgb(51, 117, 51);
+  grid-row: time-1900 / time-2030;
+}
+
 .kids {
-  background-color: purple;
-  grid-row: time-1630;
+  background-color: rgb(95, 30, 95);
+  grid-row: time-1630/time-1715;
 }
 
 .teens {
-  background-color: blue;
-  grid-row: time-1715;
+  background-color: rgb(62, 62, 121);
+  grid-row: time-1715/time-1800;
 }
 
 .wrestling {
-  background-color: violet;
-  grid-row: time-1830 / time-2000;
+  background-color: rgb(71, 108, 230);
+  grid-row: time-1900 / time-2030;
 }
 
 .monday {
@@ -796,4 +811,14 @@ p {
 .friday {
   grid-column: track-4-end;
   width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .session {
+    font-size: 10px;
+  }
+
+  .schedule {
+    width: 90%;
+  }
 }

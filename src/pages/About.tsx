@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Gorilla from "../images/gorilla.png";
+import group from "../images/group.png";
 import HeroImage from "../components/HeroImage";
 import InstructorBios from "../components/InstructorBios";
 import Aron from "../images/Aron.png";
@@ -10,7 +10,7 @@ import GandP from "../images/GandP.png";
 export default function About() {
   const imgProps = {
     id: 1,
-    src: Gorilla,
+    src: group,
     slide: false,
     imageID: "aboutImage",
     textID: "aboutText",
