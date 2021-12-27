@@ -27,7 +27,9 @@ export default function Location() {
           <HeroImage slidePosition={"1"} heroImage={imgProps} />
         </div>
       </div>
-      <Map />
+      <div id="mapContainer">
+        <Map />
+      </div>
     </div>
   );
 }

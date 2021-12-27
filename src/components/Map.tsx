@@ -1,14 +1,14 @@
 import React from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const containerStyle = {
-  width: "400px",
-  height: "400px",
+  width: "600px",
+  height: "600px",
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523,
+  lat: 51.29374426281789,
+  lng: 1.104234446036113,
 };
 
 function Map() {
@@ -37,7 +37,7 @@ function Map() {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {}
+      {<Marker position={center} />}
       <></>
     </GoogleMap>
   ) : (
