@@ -37,7 +37,6 @@ function Map() {
 
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
-    alert("unmounted");
   }, []);
 
   return isLoaded ? (
