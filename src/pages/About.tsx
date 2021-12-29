@@ -60,6 +60,7 @@ We have beginners, advanced and kids classes for Brazilian Jiu Jitsu. Our MMA cl
           <HeroImage slidePosition={"1"} heroImage={imgProps} />
         </div>
       </div>
+      <h1 className="center instructorsTitle">Instructors</h1>
       <div id="instructorListContainer">
         <div className="instructorBios">
           <InstructorBios instructorBios={instructorBios} />
