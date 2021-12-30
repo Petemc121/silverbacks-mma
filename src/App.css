@@ -590,6 +590,15 @@ p {
   }
 }
 
+@keyframes slideup {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(100px);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .instructorDescription-animation {
     animation: slideleft 1s forwards;
@@ -601,6 +610,10 @@ p {
 
   .instructorBio-animation {
     animation: fadein 2s forwards;
+  }
+
+  .nogi-animation {
+    animation: slideup 1s forwards;
   }
 }
 

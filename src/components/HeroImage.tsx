@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useCallback } from "react";
+import { useCallback } from "react";
 
 interface HeroImageInput {
   heroImage: {
