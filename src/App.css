@@ -734,38 +734,62 @@ p {
 }
 
 .nogi {
-  background-color: rgb(129, 26, 60);
+  background-color: #4c061d;
   grid-row: time-0630 / time-0800;
 }
 
 .nogiEvening {
-  background-color: rgb(129, 26, 60);
+  background-color: #4c061d;
   grid-row: time-2000 / time-2130;
 }
 
 .gi {
-  background-color: rgb(51, 117, 51);
+  background-color: #285943;
   grid-row: time-2000 / time-2130;
 }
 
 .gi-early {
-  background-color: rgb(51, 117, 51);
+  background-color: #285943;
   grid-row: time-1900 / time-2030;
 }
 
 .kids {
-  background-color: rgb(95, 30, 95);
+  background-color: #ffd166;
   grid-row: time-1630/time-1715;
 }
 
 .teens {
-  background-color: rgb(62, 62, 121);
+  background-color: #073b4c;
   grid-row: time-1715/time-1800;
 }
 
 .wrestling {
-  background-color: rgb(71, 108, 230);
+  background-color: #731dd8;
   grid-row: time-1900 / time-2030;
+}
+
+.mma {
+  background-color: #118ab2;
+  grid-row: time-2000/time-2130;
+}
+
+.kids-clicked {
+  background-color: rgb(95, 30, 95);
+}
+.teens-clicked {
+  background-color: rgb(62, 62, 121);
+}
+.nogi-clicked {
+  background-color: rgb(129, 26, 60);
+}
+.gi-clicked {
+  background-color: rgb(51, 117, 51);
+}
+.wrestling-clicked {
+  background-color: rgb(71, 108, 230);
+}
+
+.mma-clicked {
 }
 
 .monday {
@@ -842,29 +866,31 @@ p {
 
 @keyframes slideup {
   from {
-    transform: translateY(0px);
+    top: 100px;
     opacity: 0;
   }
   to {
-    transform: translateY(-100px);
+    top: 0px;
     opacity: 1;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .instructorDescription-animation {
-    animation: slideleft 1s forwards;
-  }
+.instructorDescription-animation {
+  animation: slideleft 1s forwards;
+}
 
-  .gorillaDescription-animation {
-    animation: slideright 1s forwards;
-  }
+.gorillaDescription-animation {
+  animation: slideright 1s forwards;
+}
 
-  .instructorBio-animation {
-    animation: fadein 2s forwards;
-  }
+.instructorBio-animation {
+  animation: fadein 2s forwards;
+}
 
-  .animation {
-    animation: slideup 1s forwards;
-  }
+.animation {
+  animation: slideup 1s forwards;
+}
+
+.animation:hover {
+  transform: scale(1.05);
 }

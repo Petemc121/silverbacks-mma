@@ -18,6 +18,7 @@ export default function Gallery() {
     paragraph: ``,
     button: false,
     buttonText: "",
+    buttonLink: "",
     imageContainerID: "aboutImageContainer",
     imageContainerContent: "center",
   };

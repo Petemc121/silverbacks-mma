@@ -1,5 +1,6 @@
 import React from "react";
 import { useCallback } from "react";
+import { Link } from "react-router-dom";
 
 interface HeroImageInput {
   heroImage: {
@@ -12,6 +13,7 @@ interface HeroImageInput {
     paragraph: string;
     button: boolean;
     buttonText: string;
+    buttonLink: string;
     imageContainerID: string;
     imageContainerContent: string;
   };
@@ -57,13 +59,15 @@ export default function SliderImg({
       <div ref={text} id={heroImage.textID} className="imageText">
         <h1>{heroImage.heading}</h1>
         <p>{heroImage.paragraph}</p>
-        <button
-          style={{ display: heroImage.button ? "block" : "none" }}
-          className="buttons onBlackButtons"
-          id="startNow"
-        >
-          {heroImage.buttonText}
-        </button>
+        <Link className="links" to={heroImage.buttonLink}>
+          <button
+            style={{ display: heroImage.button ? "block" : "none" }}
+            className="buttons onBlackButtons"
+            id="startNow"
+          >
+            {heroImage.buttonText}
+          </button>
+        </Link>
       </div>
       <div
         className={

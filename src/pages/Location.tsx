@@ -21,6 +21,7 @@ export default function Location() {
     paragraph: ``,
     button: false,
     buttonText: "",
+    buttonLink: "",
     imageContainerID: "aboutImageContainer",
     imageContainerContent: "center",
   };

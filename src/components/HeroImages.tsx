@@ -12,6 +12,7 @@ interface sliderImagesInput {
     paragraph: string;
     button: boolean;
     buttonText: string;
+    buttonLink: string;
     imageContainerID: string;
     imageContainerContent: string;
   }[];

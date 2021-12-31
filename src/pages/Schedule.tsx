@@ -2,8 +2,20 @@ import Header from "../components/Header";
 import HeroImage from "../components/HeroImage";
 import warmups from "../images/warmups.png";
 import Session from "../components/Session";
+import { useState } from "react";
 
 export default function Schedule() {
+  const [sessionClicked, setSessionClicked] = useState("none");
+
+  const onSessionClick = (e: any) => {
+    e.target.style.top = "50%";
+    e.target.style.left = "50%";
+  };
+
+  const resetSession = () => {
+    setSessionClicked("none");
+  };
+
   const imgProps = {
     id: 1,
     src: warmups,
@@ -14,6 +26,7 @@ export default function Schedule() {
     paragraph: ``,
     button: false,
     buttonText: "",
+    buttonLink: "",
     imageContainerID: "aboutImageContainer",
     imageContainerContent: "center",
   };
@@ -145,9 +158,16 @@ export default function Schedule() {
           <div className="days friday">Friday</div>
 
           {sessions.map((session) => {
-            return <Session session={session} />;
+            return <Session onClick={onSessionClick} session={session} />;
           })}
         </div>
+      </div>
+
+      <div
+        style={{ display: sessionClicked !== "none" ? "flex" : "none" }}
+        id="gallerySliderContainer"
+      >
+        <div onClick={resetSession} id={"gallerySlideImageBackground"}></div>
       </div>
     </div>
   );

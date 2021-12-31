@@ -22,6 +22,7 @@ We are a team with a lot of passion that can be seen by the talent that represen
 We have beginners, advanced and kids classes for Brazilian Jiu Jitsu. Our MMA classes integrate wrestling, Muay Thai, boxing and NoGi Jiu Jitsu, which are all key aspects of Mixed Martial Arts. Silverbacks MMA has something to offer everyone, whether you're a novice or seasoned professional, you will be welcomed to the family.`,
     button: false,
     buttonText: "",
+    buttonLink: "",
     imageContainerID: "aboutImageContainer",
     imageContainerContent: "center",
   };

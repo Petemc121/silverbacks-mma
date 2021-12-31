@@ -8,13 +8,18 @@ interface sessionInput {
     title: string;
     time: string;
   };
+  onClick: any;
 }
 
-export default function Session({ session }: sessionInput) {
+export default function Session({ session, onClick }: sessionInput) {
   const { ref, inView } = useInView();
 
   return (
-    <div ref={ref} className={inView ? session.animationClass : session.class}>
+    <div
+      onClick={onClick}
+      ref={ref}
+      className={inView ? session.animationClass : session.class}
+    >
       <h4 className="session-title">{session.title}</h4>
       <span className="session-time">{session.time}</span>
     </div>
