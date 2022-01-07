@@ -789,9 +789,6 @@ p {
   background-color: rgb(71, 108, 230);
 }
 
-.mma-clicked {
-}
-
 .monday {
   grid-column: track-1-start;
   width: 100%;
